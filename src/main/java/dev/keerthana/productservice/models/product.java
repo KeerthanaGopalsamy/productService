@@ -17,7 +17,7 @@ public class product extends BaseModel{
     private String imageURL;
     @ManyToOne(cascade = CascadeType.PERSIST)
 
-    private category cateGory;
+    private category category;
 
     public int getId() {
         return id;
@@ -52,10 +52,10 @@ public class product extends BaseModel{
     }
 
     public category getCateGory() {
-        return cateGory;
+        return category;
     }
 
     public void setCateGory(category cateGory) {
-        this.cateGory = cateGory;
+        this.category = cateGory;
     }
 }

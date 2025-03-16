@@ -23,8 +23,15 @@ public class SelfProductService implements ProductService {
 
     @Override
     public product getProductById(int id) {
+        System.out.println("inside getProductById");
         product response = productRepository.findById(id).get();
         System.out.println("fetched response: " + response);
+        List<category> categories= categoryRepository.findAll();
+//        List<product>products  = categories.get(0).getProducts();
+        for(category c:categories){
+            System.out.println("inside for loop");
+            System.out.println(c.getTitle());
+        }
         return response;
     }
 //getAllProducts
@@ -64,4 +71,9 @@ public class SelfProductService implements ProductService {
             throw new IllegalArgumentException("Invalid input");
         }
     }
+
+
+    //testting catrepo
+
+
 }
