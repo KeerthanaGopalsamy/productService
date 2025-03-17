@@ -14,6 +14,7 @@ public class BaseModel {
     private Date createdAt;
     private Date updatedAt;
     private boolean isDeleted;
+    private String testColumn;
 
 //    public BaseModel(int id, Date createdAt, Date updatedAt, boolean isDeleted) {
 //        this.id = id;
